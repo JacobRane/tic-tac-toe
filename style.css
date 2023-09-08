@@ -1,0 +1,60 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(238, 238, 238);
+}
+
+
+/* text and buttons above board */
+.buttonsDiv {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}
+.buttonsDiv button {
+    width: 60px;
+    height: 60px;
+    font-size: 2rem;
+}
+
+.mainText {
+    margin-bottom: 20px;
+}
+
+/* board */
+.boardSquare {
+    height: 500px;
+    width: 500px;
+    border: 1px dotted black;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+@media (max-width: 500px) {
+    .boardSquare {
+        width: 100vw;
+        height: 100vw;
+    }
+}
+
+.boardSquare [class^='square'] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 6rem;
+    border: 1px solid black;
+}
+
